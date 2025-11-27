@@ -24,7 +24,7 @@ const AppNavigator: React.FC = () => {
                     <Stack.Navigator initialRouteName='Splash' screenOptions={{ headerShown: false }}>
                         <Stack.Screen name='Splash' component={SplashScreen} />
                         <Stack.Screen name='Login' component={LoginScreen} />
-                        <Stack.Screen name="Tabs" component={TabsNavigator} options={{ headerShown: false }}/>
+                        <Stack.Screen name='Tabs' component={TabsNavigator} options={{ headerShown: false }}/>
                     </Stack.Navigator>
                 </NavigationContainer>
             </SafeAreaView>

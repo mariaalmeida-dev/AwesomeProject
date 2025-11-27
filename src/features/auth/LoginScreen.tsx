@@ -13,9 +13,9 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
 
     const handleLogin = () => {
         if (email === 'test@user.com' && password === '123456') {
-            navigation.replace('Feed');
+            navigation.replace('Tabs');
         } else {
-            Alert.alert('Erro', 'Invalid email or password');
+            Alert.alert('Error', 'Invalid email or password');
         }
     };
 
@@ -32,14 +32,14 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
             />
             <TextInput
                 style={styles.input}
-                placeholder='Senha'
+                placeholder='Password'
                 value={password}
                 onChangeText={(text: string) => setPassword(text)}
                 secureTextEntry
                 autoCapitalize='none'
             />
             <TouchableOpacity style={styles.button} onPress={handleLogin}>
-                <Text style={styles.buttonText}>Entrar</Text>
+                <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>
         </View>
     );

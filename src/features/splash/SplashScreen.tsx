@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
-import { View, Animated } from "react-native";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import React, { useEffect, useRef } from 'react';
+import { View, Animated } from 'react-native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import { RootStackParamList } from "../../navigation/AppNavigator";
-import styles from "./SplashScreen.styles";
+import { RootStackParamList } from '../../navigation/AppNavigator';
+import styles from './SplashScreen.styles';
 
-type Props = NativeStackScreenProps<RootStackParamList, "Splash">;
+type Props = NativeStackScreenProps<RootStackParamList, 'Splash'>;
 
 export default function SplashScreen({ navigation }: Props) {
     const scaleValue = useRef(new Animated.Value(0)).current;
@@ -17,7 +17,7 @@ export default function SplashScreen({ navigation }: Props) {
         }).start();
 
         const timer = setTimeout(() => {
-            navigation.replace("Login");
+            navigation.replace('Login');
         }, 2000);
 
         return () => clearTimeout(timer);

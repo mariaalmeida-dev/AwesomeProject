@@ -1,17 +1,17 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-import colors from "../../styles/colors";
+import colors from '../../styles/colors';
 
 export default StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: colors.primary,
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     logo: {
         fontSize: 40,
-        fontWeight: "bold",
-        color: "#fff",
+        fontWeight: 'bold',
+        color: '#fff',
     },
 });

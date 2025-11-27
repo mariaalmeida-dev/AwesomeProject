@@ -1,20 +1,21 @@
-import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../../navigation/AppNavigator";
-import styles from "./LoginScreen.styles";
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-type Props = NativeStackScreenProps<RootStackParamList, "Login">;
+import { RootStackParamList } from '../../navigation/AppNavigator';
+import styles from './LoginScreen.styles';
+
+type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
 const LoginScreen: React.FC<Props> = ({ navigation }) => {
-    const [email, setEmail] = useState<string>("");
-    const [password, setPassword] = useState<string>("");
+    const [email, setEmail] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
 
     const handleLogin = () => {
-        if (email === "test@user.com" && password === "123456") {
-            Alert.alert("Sucesso", "Login mock OK");
+        if (email === 'test@user.com' && password === '123456') {
+            navigation.replace('Feed');
         } else {
-            Alert.alert("Erro", "Email ou senha inválidos");
+            Alert.alert('Erro', 'Invalid email or password');
         }
     };
 
@@ -23,19 +24,19 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
             <Text style={styles.title}>Login</Text>
             <TextInput
                 style={styles.input}
-                placeholder="Email"
+                placeholder='Email'
                 value={email}
                 onChangeText={(text: string) => setEmail(text)}
-                keyboardType="email-address"
-                autoCapitalize="none"
+                keyboardType='email-address'
+                autoCapitalize='none'
             />
             <TextInput
                 style={styles.input}
-                placeholder="Senha"
+                placeholder='Senha'
                 value={password}
                 onChangeText={(text: string) => setPassword(text)}
                 secureTextEntry
-                autoCapitalize="none"
+                autoCapitalize='none'
             />
             <TouchableOpacity style={styles.button} onPress={handleLogin}>
                 <Text style={styles.buttonText}>Entrar</Text>

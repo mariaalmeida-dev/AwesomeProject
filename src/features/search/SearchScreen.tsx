@@ -1,16 +1,35 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import React, { useState } from 'react';
+import { View, TextInput, FlatList, Image } from 'react-native';
 
-import { TabsParamList } from '../../navigation/TabsNavigator';
-import styles from './SearchScreen.styles.ts';
+import styles from './SearchScreen.styles';
+import { SEARCH_DATA } from "./searchData";
 
-type Props = BottomTabScreenProps<TabsParamList, 'Search'>;
+export default function SearchScreen() {
+    const [query, setQuery] = useState('');
 
-export default function SearchScreen({ navigation, route }: Props) {
+    const filtered = SEARCH_DATA.filter((item) =>
+        item.id.includes(query.toLowerCase())
+    );
+
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Search</Text>
+            <TextInput
+                style={styles.searchBar}
+                placeholder="Search"
+                placeholderTextColor="#888"
+                value={query}
+                onChangeText={setQuery}
+            />
+
+            <FlatList
+                data={filtered}
+                numColumns={3}
+                keyExtractor={(item) => item.id}
+                renderItem={({ item }) => (
+                    <Image source={{ uri: item.url }} style={styles.gridImage} />
+                )}
+                showsVerticalScrollIndicator={false}
+            />
         </View>
     );
 }

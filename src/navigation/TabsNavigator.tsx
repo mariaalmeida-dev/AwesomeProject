@@ -4,7 +4,6 @@ import Ionicons from '@react-native-vector-icons/ionicons';
 
 import HomeScreen from '../features/home/HomeScreen';
 import SearchScreen from '../features/search/SearchScreen';
-import ReelsScreen from '../features/reels/ReelsScreen';
 import ProfileScreen from '../features/profile/ProfileScreen';
 
 export type TabsParamList = {
@@ -37,9 +36,6 @@ export default function TabsNavigator() {
                         case 'Search':
                             iconName = focused ? 'search' : 'search-outline';
                             break;
-                        case 'Reels':
-                            iconName = focused ? 'play-circle' : 'play-circle-outline';
-                            break;
                         case 'Profile':
                             iconName = focused ? 'person' : 'person-outline';
                             break;
@@ -51,7 +47,6 @@ export default function TabsNavigator() {
         >
             <Tab.Screen name='Home' component={HomeScreen} />
             <Tab.Screen name='Search' component={SearchScreen} />
-            <Tab.Screen name='Reels' component={ReelsScreen} />
             <Tab.Screen name='Profile' component={ProfileScreen} />
         </Tab.Navigator>
     );

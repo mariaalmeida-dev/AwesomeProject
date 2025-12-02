@@ -1,0 +1,17 @@
+export const SEARCH_DATA = [
+    { id: "1", url: "https://picsum.photos/300?1" },
+    { id: "2", url: "https://picsum.photos/300?2" },
+    { id: "3", url: "https://picsum.photos/300?3" },
+    { id: "4", url: "https://picsum.photos/300?4" },
+    { id: "5", url: "https://picsum.photos/300?5" },
+    { id: "6", url: "https://picsum.photos/300?6" },
+    { id: "7", url: "https://picsum.photos/300?7" },
+    { id: "8", url: "https://picsum.photos/300?8" },
+    { id: "9", url: "https://picsum.photos/300?9" },
+    { id: "10", url: "https://picsum.photos/300?10" },
+    { id: "11", url: "https://picsum.photos/300?11" },
+    { id: "12", url: "https://picsum.photos/300?12" },
+    { id: "13", url: "https://picsum.photos/300?13" },
+    { id: "14", url: "https://picsum.photos/300?14" },
+    { id: "15", url: "https://picsum.photos/300?15" },
+];

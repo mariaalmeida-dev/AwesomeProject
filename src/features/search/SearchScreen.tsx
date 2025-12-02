@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, FlatList, Image } from 'react-native';
 
 import styles from './SearchScreen.styles';
-import { SEARCH_DATA } from "./searchData";
+import { SEARCH_DATA } from './searchData';
 
 export default function SearchScreen() {
     const [query, setQuery] = useState('');
@@ -15,8 +15,8 @@ export default function SearchScreen() {
         <View style={styles.container}>
             <TextInput
                 style={styles.searchBar}
-                placeholder="Search"
-                placeholderTextColor="#888"
+                placeholder='Search'
+                placeholderTextColor='#888'
                 value={query}
                 onChangeText={setQuery}
             />

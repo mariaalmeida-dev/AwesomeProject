@@ -3,14 +3,14 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "black",
+        backgroundColor: 'black',
     },
     searchBar: {
         margin: 16,
         padding: 12,
-        backgroundColor: "#1A1A1A",
+        backgroundColor: '#1A1A1A',
         borderRadius: 12,
-        color: "white",
+        color: 'white',
         fontSize: 16,
     },
     gridImage: {

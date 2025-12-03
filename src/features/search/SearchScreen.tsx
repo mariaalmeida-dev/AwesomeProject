@@ -7,9 +7,15 @@ import { SEARCH_DATA } from './searchData';
 export default function SearchScreen() {
     const [query, setQuery] = useState('');
 
-    const filtered = SEARCH_DATA.filter((item) =>
-        item.id.includes(query.toLowerCase())
-    );
+    const normalized = query.trim().toLowerCase();
+
+    const filtered = normalized
+        ? SEARCH_DATA.filter((item) =>
+            item.username.toLowerCase().includes(normalized) ||
+            item.caption.toLowerCase().includes(normalized) ||
+            item.hashtags?.some((tag) => tag.toLowerCase().includes(normalized))
+        )
+        : SEARCH_DATA;
 
     return (
         <View style={styles.container}>

@@ -115,9 +115,13 @@ If everything is set up correctly, you should see your new app running in the An
 
 This is one way to run your app — you can also build it directly from Android Studio or Xcode.
 
+## 🎥 Demo
+
+https://www.loom.com/share/847b7abdaee040da93dd8988e6a52045
 
 
-## 👩‍💻 About the Developer
+
+## 👩🏻‍💻 About the Developer
 
 Hi! I'm a senior frontend engineer passionate about creating smooth, delightful user experiences.
 I believe strong engineering is not defined by gender — it's defined by skill, resilience, and continuous learning.

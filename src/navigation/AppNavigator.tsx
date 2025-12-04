@@ -1,6 +1,4 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -18,17 +16,13 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const AppNavigator: React.FC = () => {
     return (
-        <SafeAreaProvider>
-            <SafeAreaView style={{ flex: 1 }} edges={['top', 'bottom']}>
-                <NavigationContainer>
-                    <Stack.Navigator initialRouteName='Splash' screenOptions={{ headerShown: false }}>
-                        <Stack.Screen name='Splash' component={SplashScreen} />
-                        <Stack.Screen name='Login' component={LoginScreen} />
-                        <Stack.Screen name='Tabs' component={TabsNavigator} options={{ headerShown: false }}/>
-                    </Stack.Navigator>
-                </NavigationContainer>
-            </SafeAreaView>
-        </SafeAreaProvider>
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName='Splash' screenOptions={{ headerShown: false }}>
+                <Stack.Screen name='Splash' component={SplashScreen} />
+                <Stack.Screen name='Login' component={LoginScreen} />
+                <Stack.Screen name='Tabs' component={TabsNavigator} options={{ headerShown: false }}/>
+            </Stack.Navigator>
+        </NavigationContainer>
 
     );
 };
